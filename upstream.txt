@@ -1,0 +1,53 @@
+fork仓库 保持上游更新
+
+git remote -v #您的fork的当前配置的远程仓库。
+git remote add upstream #https.gitxxx  指定上游仓库
+git fetch upstream #抓取上游仓库的更新到本地
+git branch #列出当前有多少分支
+git checkout master #切换到 master 主分支
+git merge upstream/master #合并上游更新
+git push origin master #推送合并后的更新
+
+#如果出现问题不能合并更新，或PUSH，可在执行 git push 前运行 git status 命令查看哪些文件已修改但未提交到暂存区，
+#并使用 git add [finename] 将这些文件的修改状态进行跟踪
+
+#Git 常用命令集
+检出仓库：$ git clone git://github.com/limbopro/Script.git
+查看远程仓库：$ git remote -v #刚刚已经用过了
+添加远程仓库：$ git remote add [name] [url] #刚刚已经用过了
+删除远程仓库：$ git remote rm [name]
+修改远程仓库：$ git remote set-url --push [name] [newUrl]
+拉取远程仓库：$ git pull [remoteName] [localBranchName] # 与fetch 有所区别
+推送远程仓库：$ git push [remoteName] [localBranchName] 
+
+查看本地分支：$ git branch #一般默认为 master
+查看远程分支：$ git branch -r 
+创建本地分支：$ git branch [name] ----注意新分支创建后不会自动切换为当前分支
+切换分支：$ git checkout [name]
+创建新分支并立即切换到新分支：$ git checkout -b [name]
+删除分支：$ git branch -d [name] ---- -d选项只能删除已经参与了合并的分支，对于未有合并的分支是无法删除的。如果想强制删除一个分支，可以使用-D选项
+合并分支：$ git merge [name] ----将名称为[name]的分支与当前分支合并
+
+查看当前状态：$ git status #同步上游仓库更新时会常用到
+提交：$ git commit #合并更新后，提交到远程仓库会用到
+查看所有的分支：$ git branch -a 
+查看远程所有分支：$ git branch -r 
+
+**查看、添加、提交、删除、找回，重置修改文件**
+git help <command> # 显示command的help
+git show # 显示某次提交的内容 git show $id
+git co -- <file> # 抛弃工作区修改
+git co . # 抛弃工作区修改
+git add <file> # 将工作文件修改提交到本地暂存区
+git add . # 将所有修改过的工作文件提交暂存区
+git rm <file> # 从版本库中删除文件
+git rm <file> --cached # 从版本库中删除文件，但不删除文件
+git reset <file> # 从暂存区恢复到工作文件
+git reset -- . # 从暂存区恢复到工作文件
+git reset --hard # 恢复最近一次提交过的状态，即放弃上次提交后的所有本次修改
+git ci --amend # 修改最后一次提交记录
+git revert <$id> # 恢复某次提交的状态，恢复动作本身也创建次提交对象
+git revert HEAD # 恢复最后一次提交的状态
+**查看文件diff**
+git diff <file> # 比较当前文件和暂存区文件差异 git diff
+git diff < i d1> <id2> # 比较两次提交之间的差异
