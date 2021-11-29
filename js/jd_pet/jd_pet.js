@@ -516,7 +516,7 @@ function requireConfig() {
       cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
     }
     console.log(`共${cookiesArr.length}个京东账号\n`)
-    $.shareCodesArr = ['MTAxODc2NTEzMTAwMDAwMDAwNjI1Nzc5NQ=='];
+    $.shareCodesArr = [];
     if ($.isNode()) {
       Object.keys(jdPetShareCodes).forEach((item) => {
         if (jdPetShareCodes[item]) {
