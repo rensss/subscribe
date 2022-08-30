@@ -15010,7 +15010,7 @@ DOMAIN-SUFFIX,analyzer52.fc2.com,REJECT
 DOMAIN-SUFFIX,anon-stats.eff.org,REJECT
 DOMAIN-SUFFIX,anti-bot.baidu.com,REJECT
 DOMAIN-SUFFIX,ape-tagit.timeinc.net,REJECT
-DOMAIN-SUFFIX,apester.com/event,REJECT
+# DOMAIN-SUFFIX,apester.com/event,REJECT
 DOMAIN-SUFFIX,api.nobeta.com.br,REJECT
 DOMAIN-SUFFIX,api.wipmania.com,REJECT
 DOMAIN-SUFFIX,apple.www.letv.com,REJECT
