@@ -1,6 +1,6 @@
 /*
 [rewrite_local]
-^https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/iamhuangli/QuantumultX/main/rewrite/crack/caiyun.js
+^https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/rensss/subscribe/master/js/js_caiyun/caiyun.js
 [MITM]
 hostname = biz.caiyunapp.com
 */
