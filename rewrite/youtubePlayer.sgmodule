@@ -1,0 +1,3 @@
+hostname = *.googlevideo.com, youtubei.googleapis.com
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube-player.js
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url script-response-header https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube-fake.js
